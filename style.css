@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* Theme name:es-batting
+Description:es-batting様用テンプレート
+Version: 1.0
+Author: S.Miyakawa */
+
+/* index.phpのmainタグにスタイルを適用 */
+#main {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+}
+

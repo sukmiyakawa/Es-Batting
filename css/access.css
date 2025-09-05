@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* access */
+.access{
+    /* padding: 0 var(--contents__blank__sp);
+    margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+iframe{
+    width: 100%;
+    height: 50%;
+    aspect-ratio: 2/1;
+}
+h3{
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: 10px solid #E6B422;
+    margin: 0 auto 20px;
+    width: fit-content;
+}
+.train_fig {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 115px 1fr 73px 1fr 115px 1fr 115px 1fr 73px 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    height: 781px;
+}
+
+.div1 { grid-area: 1 / 3 / 2 / 4; }
+.div2 { grid-area: 2 / 3 / 3 / 4; }
+.div3 { grid-area: 3 / 3 / 4 / 4; }
+.div4 { grid-area: 4 / 3 / 5 / 4; }
+.div5 { grid-area: 5 / 3 / 6 / 4; }
+.div6 { grid-area: 6 / 3 / 7 / 4; }
+.div7 { grid-area: 1 / 1 / 2 / 2; }
+.div8 { grid-area: 2 / 1 / 5 / 2; }
+.div9 { grid-area: 1 / 2 / 2 / 3; }
+.div10 { grid-area: 2 / 2 / 5 / 3; }
+.div11 { grid-area: 5 / 1 / 6 / 3; }
+.div12 { grid-area: 6 / 1 / 7 / 3; }
+.div13 { grid-area: 7 / 1 / 8 / 4; }
+.div14 { grid-area: 8 / 1 / 11 / 3; }
+.div15 { grid-area: 8 / 3 / 9 / 4; }
+.div16 { grid-area: 9 / 3 / 10 / 4; }
+.div17 { grid-area: 10 / 3 / 11 / 4; }
+.div18 { grid-area: 11 / 1 / 12 / 4; }
+
+.train_fig div{
+    padding: 0 5px;
+}
+.spot{
+    border-radius: 10px;
+    border: 5px solid var(--maincolor);
+    background-color: var(--semibasecolor);
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    align-content: center;
+}
+.method{
+    width: 70%;
+    margin-left: 50%;
+    color: #000;
+    text-align: start;
+    font-family: "Noto Sans JP";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    align-content: center;
+    padding: 5px 0 5px 5px;
+}
+.SS{
+    border-left: 3px solid #09C;
+}
+.TJ{
+    border-left: 3px solid #004098;
+}
+.JA{
+    border-left: 3px solid #00AC9A;
+}
+.bus{
+    border-left: 3px solid #EF17F3;
+}
+.walk{
+    border-left: 3px solid #000;
+}
+.logo_access{
+    width: 88px;
+    height: 50px;
+}
+.car_fig {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 128px 71px 128px 71px 128px 71px 128px 71px 59px;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+}
+
+.div19 { grid-area: 1 / 1 / 2 / 2; }
+.div20 { grid-area: 2 / 1 / 7 / 2; }
+.div21 { grid-area: 1 / 2 / 2 / 3; }
+.div22 { grid-area: 2 / 2 / 3 / 3; }
+.div23 { grid-area: 3 / 2 / 4 / 3; }
+.div24 { grid-area: 4 / 2 / 5 / 3; }
+.div25 { grid-area: 5 / 2 / 6 / 3; }
+.div26 { grid-area: 6 / 2 / 7 / 3; }
+.div27 { grid-area: 1 / 3 / 2 / 4; }
+.div28 { grid-area: 2 / 3 / 7 / 4; }
+.div29 { grid-area: 7 / 1 / 8 / 3; }
+.div30 { grid-area: 8 / 1 / 9 / 3; }
+.div31 { grid-area: 7 / 3 / 8 / 4; }
+.div32 { grid-area: 8 / 3 / 9 / 4; }
+.div33 { grid-area: 9 / 1 / 10 / 4; }
+
+.method--expwy{
+    border-left: 3px solid #06C755;
+}
+.method--local{
+    border-left: 3px solid #000;
+}
+@media screen and (min-width:768px) {
+    .access{
+        margin-top: 100px;
+    }
+    h3{
+        font-size: 3.6rem;
+    }
+    @media screen and (min-width:1024px){
+        .access{
+            gap: 50px;
+        }
+        h3{
+            margin-bottom: 50px;
+        }
+        .train_fig {
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 50px;
+            width: 100%;
+            height: 520px;
+        }
+
+        .div1 { grid-area: 3 / 1 / 4 / 2; }
+        .div2 { grid-area: 3 / 2 / 4 / 3; }
+        .div3 { grid-area: 3 / 3 / 4 / 4; }
+        .div4 { grid-area: 3 / 4 / 4 / 5; }
+        .div5 { grid-area: 3 / 5 / 4 / 6; }
+        .div6 { grid-area: 3 / 6 / 4 / 7; }
+        .div7 { grid-area: 1 / 1 / 2 / 2; }
+        .div8 { grid-area: 1 / 2 / 2 / 4; }
+        .div9 { grid-area: 2 / 1 / 3 / 2; }
+        .div10 { grid-area: 2 / 2 / 3 / 4; }
+        .div11 { grid-area: 1 / 4 / 3 / 5; }
+        .div12 { grid-area: 1 / 5 / 3 / 7; }
+        .div13 { grid-area: 1 / 7 / 4 / 8; }
+        .div14 { grid-area: 1 / 8 / 3 / 11; }
+        .div15 { grid-area: 3 / 8 / 4 / 9; }
+        .div16 { grid-area: 3 / 9 / 4 / 10; }
+        .div17 { grid-area: 3 / 10 / 4 / 11; }
+        .div18 { grid-area: 1 / 11 / 4 / 12; }
+        .train_fig div{
+            padding: 0;
+        }
+        .spot{
+            font-size: 2.4rem;
+        }
+        .method{
+            width: 100%;
+            height: 80%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .SS{
+            border-left: none;
+            border-bottom: 3px solid #09C;
+        }
+        .TJ{
+            border-left: none;
+            border-bottom: 3px solid #004098;
+        }
+        .JA{
+            border-left: none;
+            border-bottom: 3px solid #00AC9A;
+        }
+        .bus{
+            border-left: none;
+            border-bottom: 3px solid #EF17F3;
+        }
+        .walk{
+            border-left: none;
+            border-bottom: 3px solid #000;
+        }
+        .car_fig {
+            grid-template-columns: 90.2px 1fr 90.2px 1fr 90.2px 1fr 90.2px 1fr 98px;
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 50px;
+            width: 1000px;
+            }
+            
+        .div19 { grid-area: 1 / 1 / 2 / 2; }
+        .div20 { grid-area: 1 / 2 / 2 / 7; }
+        .div21 { grid-area: 2 / 1 / 3 / 2; }
+        .div22 { grid-area: 2 / 2 / 3 / 3; }
+        .div23 { grid-area: 2 / 3 / 3 / 4; }
+        .div24 { grid-area: 2 / 4 / 3 / 5; }
+        .div25 { grid-area: 2 / 5 / 3 / 6; }
+        .div26 { grid-area: 2 / 6 / 3 / 7; }
+        .div27 { grid-area: 3 / 1 / 4 / 2; }
+        .div28 { grid-area: 3 / 2 / 4 / 7; }
+        .div29 { grid-area: 1 / 7 / 3 / 8; }
+        .div30 { grid-area: 1 / 8 / 3 / 9; }
+        .div31 { grid-area: 3 / 7 / 4 / 8; }
+        .div32 { grid-area: 3 / 8 / 4 / 9; }
+        .div33 { grid-area: 1 / 9 / 4 / 10; }
+        
+        .car_fig .method{
+            height: 65%;
+        }
+        .method--expwy{
+            border-left: none;
+            border-bottom: 3px solid #06C755;
+        }
+        .method--local{
+            border-left: none;
+            border-bottom: 3px solid #000;
+        }
+    }
+}
+
+/* deco */
+main{
+    position: relative;
+    overflow: hidden;
+}
+.decoration_1::before{
+    content: url(../image/common/homeBase_decoration_sp.png);
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    z-index: -1;
+}
+.decoration_2::before{
+    content: url(../image/common/homeBase_decoration_sp.png);
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    z-index: -1;
+    transform: scaleX(-1);
+}
+.decoration_3::before{
+    content: url(../image/common/homeBase_decoration_sp.png);
+    position: absolute;
+    top: 58%;
+    left: 15%;
+    z-index: -1;
+}
+.decoration_4::before{
+    content: url(../image/common/homeBase_decoration_sp.png);
+    position: absolute;
+    top: 76%;
+    right: 25%;
+    z-index: -1;
+    transform: scaleX(-1);
+}

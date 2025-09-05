@@ -1,0 +1,33 @@
+@charset "UTF-8";
+h3{
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.privacyPolicy_txt{
+    text-align: start;
+    margin-bottom: 30px;
+}
+.topTopic{
+    margin-bottom: 30px;
+}
+.privacyPolicy{
+    width: 315px;
+    margin: 80px auto 0;
+}
+
+@media screen and (min-width:768px) {
+    .privacyPolicy{
+        width: 700px;
+        margin: 100px auto 0;
+    }
+}
+@media screen and (min-width:1024px) {
+    .privacyPolicy{
+        width: 1000px;
+    }
+}

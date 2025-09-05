@@ -1,0 +1,488 @@
+@charset "UTF-8";
+
+/* facility */
+.facility {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.facility_contents {
+  display: grid;
+  grid-template-columns: 21px 25px 129px 50px 90px;
+  grid-template-rows: 80px 83px 122px 93px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 315px;
+  height: 378px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 4 / 2;
+  writing-mode: vertical-lr;
+  align-content: center;
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.2px;
+}
+.div2 {
+  grid-area: 1 / 2 / 5 / 3;
+  margin-right: 10px;
+  background-image: url(../image/facility/line.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+}
+.div3 {
+  grid-area: 4 / 1 / 5 / 6;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+.div4 {
+  grid-area: 1 / 3 / 3 / 4;
+  margin: 0 10px 10px 0;
+}
+.div5 {
+  grid-area: 3 / 3 / 4 / 4;
+  margin-right: 10px;
+}
+.div6 {
+  grid-area: 1 / 4 / 2 / 6;
+}
+.div7 {
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+.div4,
+.div5,
+.div6,
+.div7 {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+.facility_contents a {
+  display: block;
+  height: fit-content;
+}
+.facility_contents_item,
+.div7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+.div6 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div6 div .facility_icon {
+  margin-right: 8px;
+}
+.facility_contents_txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.div4 .facility_contents_item .facility_contents_txt,
+.div5 .facility_contents_item .facility_contents_txt {
+  flex-direction: column;
+}
+.facility_contents_topic {
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.facility_icon {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+.icon_arrow {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  scale: 0;
+  transition: opacity 0.5s, scale 0s 0.5s;
+  z-index: 50;
+}
+.modal:target {
+  opacity: 1;
+  scale: 1;
+  transition: opacity 0.5s;
+}
+.modal:not(:target) {
+  opacity: 0;
+  scale: 0;
+  transition: opacity 0.5s, scale 0s 0.5s;
+}
+.modal .modal_wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100vh;
+}
+.modal_contents {
+  position: relative;
+  width: 315px;
+  max-height: 90vh;
+  padding: 20px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--semibasecolor);
+  overflow: scroll;
+  transform: translateY(150%);
+  transition: transform 0.5s;
+  z-index: 100;
+}
+.modal:target .modal_contents {
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+.div4.open,
+.div5.open,
+.div6.open {
+  scale: 1;
+  transform-origin: center;
+  transition: scale 0.3s;
+}
+body:has(.modal:target) .div4.open,
+body:has(.modal:target) .div5.open,
+body:has(.modal:target) .div6.open {
+  scale: 0.9;
+  transition: scale 0.3s;
+}
+.modal_contents_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.modal_contents_topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.modal_txt_pc {
+  display: contents;
+}
+.modal_fee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.fee_contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.topic_closebtn {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1/1;
+}
+.modal_fig {
+  width: 100%;
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+}
+.modal_txt {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+h4,
+h5 {
+  color: #000;
+  font-family: "Noto Sans JP";
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+}
+h5 {
+  line-height: 2.2;
+}
+.fee_txt {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+.value {
+  color: #00489d;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.modal_fee {
+  position: relative;
+}
+.oneplay::after {
+  position: absolute;
+  content: "";
+  top: 14.5%;
+  left: 0;
+  background-image: url(../image/facility/icon_fee.png);
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+.reservation_course::after {
+  position: absolute;
+  content: "";
+  top: 50.5%;
+  right: 80%;
+  background-image: url(../image/facility/icon_fee.png);
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+.value_note {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .facility {
+    margin-top: 100px;
+    height: 528px;
+    gap: 50px;
+  }
+  .facility_contents {
+    grid-template-columns: 22px 25px 257px 170px 218px;
+    width: 700px;
+    height: 378px;
+  }
+  .div4 .facility_contents_item .facility_contents_txt,
+  .div5 .facility_contents_item .facility_contents_txt {
+    flex-direction: row;
+  }
+  .div7 {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .modal_contents_top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    width: 630px;
+    height: fit-content;
+    margin: auto 0;
+  }
+
+  .modal_contents_topic {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .modal_fig {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 325px;
+  }
+  .modal_txt {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .modal_contents {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .modal:target .modal_contents {
+    transform: translateY(30%);
+  }
+  #reception:target .modal_contents {
+    transform: translateY(40%);
+  }
+  .modal_contents_top {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .modal_fee {
+    flex-direction: row;
+    gap: 50px;
+  }
+  .fee_contents {
+    flex-direction: row;
+    align-items: start;
+    gap: 50px;
+  }
+  .oneplay::after {
+    top: 5.5%;
+    left: 22%;
+  }
+  .reservation_course::after {
+    top: 5.5%;
+    right: 29%;
+  }
+  @media screen and (min-width: 1024px) {
+    .facility {
+      height: 602px;
+    }
+    .facility_contents {
+      grid-template-columns: 22px 25px 310px 269px 374px;
+      grid-template-rows: 120px 83px 156px 93px;
+      width: 1000px;
+      height: 452px;
+    }
+    .div2 {
+      background-size: auto 485px;
+    }
+    .modal_fig {
+      width: 490px;
+    }
+    .modal_contents {
+      width: 1000px;
+    }
+    .modal:target .modal_contents {
+      transform: translateY(0);
+    }
+    #reception:target .modal_contents {
+      transform: translateY(10%);
+    }
+    .modal_contents_top {
+      width: 930px;
+    }
+    .oneplay::after {
+      left: 15%;
+    }
+    .facility_icon {
+      width: 100px;
+    }
+    .facility_contents_topic {
+      font-size: 2.4rem;
+    }
+    .icon_arrow {
+      width: 30px;
+      height: 30px;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+    .modal_txt {
+      font-size: 1.6rem;
+    }
+    h4.h5 {
+      font-size: 3.2rem;
+    }
+    h4 {
+      width: fit-content;
+    }
+    .spanpc {
+      display: inline-block;
+    }
+    .modal_fee {
+      width: fit-content;
+      justify-content: space-between;
+    }
+    .fee_txt {
+      font-size: 3.2rem;
+    }
+    .value {
+      font-size: 6.4rem;
+    }
+    .value_note {
+      font-size: 3.2rem;
+    }
+    .oneplay::after {
+      top: 4%;
+      left: 22%;
+    }
+    .reservation_course::after {
+      top: 4%;
+    }
+  }
+}
+
+/* howto */
+.howtouse_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.howtouse_item {
+  display: flex;
+  width: 220px;
+  height: 228px;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  border-radius: 10px;
+  border: 5px solid #00489d;
+  background: #fff;
+}
+.howtouse_item h3 {
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+.howtouse_item_en {
+  color: #00489d;
+  font-family: Lobster;
+}
+.howtouse_item_txt {
+  font-size: 1.4rem;
+}
+.howtouse_note {
+  line-height: 2;
+}
+#howto {
+  scroll-margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .howtouse_contents {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .howtouse_item {
+    height: 250px;
+  }
+  .howtouse_item h3 {
+    font-size: 2.4rem;
+  }
+  .howtouse_item_txt {
+    font-size: 1.6rem;
+  }
+}

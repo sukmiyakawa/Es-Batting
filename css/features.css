@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+/* features */
+.features, .features_contents{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.features_item, .figandtxt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.features_wrapper{
+    width: 100%;
+}
+h3{
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.figandtxt img{
+    border-radius: 10px;
+}
+.features_img{
+    width: 315px;
+    aspect-ratio: 3/2;
+}
+.features_txt{
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 2;
+    position: relative;
+}
+#ball, #BLAST, #reservation{
+    scroll-margin-top: 50px;
+}
+#BLAST h3{
+    text-align: right;
+}
+.BLAST_mizuno{
+    color: var(--accentcolor);
+}
+.features_txt_marker::before{
+    position: absolute;
+    content: url(../image/common/li_marker.svg);
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+.figandtxt{
+    position: relative;
+}
+#ball .features_txt::after{
+    position: absolute;
+    content: '';
+    background-image: url(../image/features/1.png);
+    background-size: contain;
+    bottom: 0;
+    right: 0;
+    width: 66px;
+    height: 140px;
+    z-index: -1;
+}
+#BLAST .features_txt::after{
+    position: absolute;
+    content: '';
+    background-image: url(../image/features/2.png);
+    background-size: contain;
+    bottom: 0;
+    right: 0;
+    width: 114px;
+    height: 140px;
+    z-index: -1;
+}
+#reservation .features_txt::after{
+    position: absolute;
+    content: '';
+    background-image: url(../image/features/3.png);
+    background-size: contain;
+    bottom: 0;
+    right: 0;
+    width: 107px;
+    height: 140px;
+    z-index: -1;
+}
+.subMenu{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 72, 157, 0.8);
+    overflow: hidden;
+}
+.subMenu.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 315px;
+}
+.subMenu a{
+    width: calc(100%/3);
+}
+.subNavi_item{
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; 
+    border-left: 1px solid rgba(0, 0, 0, 0.50);
+    height: 63px;
+    align-content: center;
+    height: 70px;
+}   
+.subNavi_item--ball{
+    border-left: none;
+}
+.subNavi_item--ball.downfase_one::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 0;
+    background-color: var(--accentcolor);
+    animation: downfase_one .4s ease forwards;
+}
+@keyframes downfase_one {
+    to {
+        width: 100%;
+    }
+}
+.subNavi_item--ball.downfase_two::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--accentcolor);
+    animation: downfase_two .4s ease forwards;
+}
+@keyframes downfase_two {
+    to{
+        left: 100%;
+    }
+}
+.subNavi_item--ball.downfase_three::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 100%;
+    height: 10%;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--accentcolor);
+    animation: downfase_three .4s ease forwards;
+}
+@keyframes downfase_three {
+    to{
+        left: 200%;
+    }
+}
+.subNavi_item--ball.upfase_one::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 100%;
+    height: 10%;
+    width: 100%;
+    background-color: var(--accentcolor);
+    z-index: -1;
+    animation: upfase_one .4s ease forwards;
+}
+@keyframes upfase_one {
+  to {
+    left: 0;
+  }
+}
+.subNavi_item--ball.upfase_two::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 200%;
+    height: 10%;
+    width: 100%;
+    background-color: var(--accentcolor);
+    z-index: -1;
+    animation: upfase_two .4s ease forwards;
+}
+@keyframes upfase_two {
+  to {
+    left: 100%;
+  }
+}
+.subNavi_item--ball.upfase_three::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 300%;
+    height: 10%;
+    width: 100%;
+    background-color: var(--accentcolor);
+    z-index: -1;
+    animation: upfase_three .4s ease forwards;
+}
+@keyframes upfase_three {
+  to {
+    left: 200%;
+  }
+}
+
+@media screen and (min-width:768px) {
+    .features{
+        margin-top: 100px;
+        }
+    .figandtxt{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    .features_img{
+        width: 270px;
+    }
+    .features_txt{
+        font-size: 1.6rem;
+        width: 329px;
+    }
+    .subMenu{
+        display: none;
+    }
+    @media screen and (min-width:1024px) {
+        .features_contents{
+            width: 630px;
+        }
+        .features, .features_contents{
+            gap:50px;
+        }
+        .features_wrapper{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .subMenu{
+            display: flex;
+            margin-top: 0;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+            width: 238px;
+            height: fit-content;
+            border-radius: 20px;
+            padding: 20px;
+
+        }
+        .subMenu a{
+            width: 100%;
+        }
+        .subNavi_item{
+            font-size: 2.4rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.50);
+            height: 63px;
+            align-content: center;
+            border-left: none;
+            height: fit-content;
+        }
+        .subMenu.sticky{
+            position: sticky;
+            top: 100px;
+            left: calc(((100vw-1000px)/2)/100vw);
+
+            width: 238px;
+            height: 328px;
+
+        }
+        .subNavi_item--ball.downfase_one::before{
+        position: absolute;
+        content: '';
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        background-color: var(--accentcolor);
+        animation: downfase_one .4s ease forwards;
+        }
+        @keyframes downfase_one {
+            to {
+                top: 0;
+            }
+        }
+        .subNavi_item--ball.downfase_two::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        z-index: -1;
+        background-color: var(--accentcolor);
+        animation: downfase_two .4s ease forwards;
+        }
+        @keyframes downfase_two {
+            to{
+                top: 93px;
+                height: 108px;
+            }
+        }
+        .subNavi_item--ball.downfase_three::before{
+            position: absolute;
+            content: '';
+            top: 93px;
+            left: 0;
+            height: 108px;
+            width: 5px;
+            z-index: -1;
+            background-color: var(--accentcolor);
+            animation: downfase_three .4s ease forwards;
+        }
+        @keyframes downfase_three {
+            to{
+                top: 251px;
+                height: 100%;
+            }
+        }
+        .subNavi_item--ball.upfase_one::after{
+            position: absolute;
+            content: '';
+            top: 93px;
+            left: 0;
+            height: 108px;
+            width: 5px;
+            background-color: var(--accentcolor);
+            animation: upfase_one .4s ease forwards;
+        }
+        @keyframes upfase_one {
+        to {
+            top: 0;
+            height: 100%;
+        }
+        }
+        .subNavi_item--ball.upfase_two::before{
+            position: absolute;
+            content: '';
+            top: 251px;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: var(--accentcolor);
+            z-index: -1;
+            animation: upfase_two .4s ease forwards;
+        }
+        @keyframes upfase_two {
+        to {
+            top: 93px;
+            height: 108px;
+        }
+        }
+        .subNavi_item--ball.upfase_three::before{
+            position: absolute;
+            content: '';
+            top: 300px;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: var(--accentcolor);
+            z-index: -1;
+            animation: upfase_three .4s ease forwards;
+        }
+        @keyframes upfase_three {
+        to {
+            top: 251px;
+        }
+        }
+
+    }
+}

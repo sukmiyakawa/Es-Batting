@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* hope */
+.hope, .hope_contents, .hope_fig{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+h3{
+    color: #000;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 8px;
+}
+.hope_fig img{
+    width: 315px;
+    aspect-ratio: 3/2;
+    border-radius: 10px;
+}
+.hope_contents_txt{
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+.hope_contents{
+    position: relative;
+}
+.limarker{
+    width: 16px;
+    height: 16px;
+}
+.limarker_1st{
+    position: absolute;
+    top: 74.3%;
+    left:-1%;
+}
+.limarker_2nd{
+    position: absolute;
+    top: 77%;
+    left:-1%;
+}
+.limarker_3rd{
+    position: absolute;
+    top: 79.5%;
+    left:-1%;
+}
+.limarker_4th{
+    position: absolute;
+    top: 82%;
+    left:-1%;
+}
+.gold_hightlight{
+    position: relative;
+}
+.gold_hightlight--first.active::before, .gold_hightlight--second.active::before,.gold_hightlight--third.active::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(transparent 60%, var(--accentcolor));
+    z-index: -1;
+    animation: width .4s ease forwards;
+}
+@keyframes width {
+    to{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hope{
+        margin-top: 100px;
+        }
+    .hope_contents{
+        flex-direction: row;
+        align-items: center;
+    }
+    .hope_fig{
+        gap: 50px;
+    }
+    h3{
+        font-size: 2.4rem;
+        letter-spacing: 12px;
+    }
+    .hope_contents_txt{
+        font-size: 1.6rem;
+    }
+    .limarker_1st{
+        top:55.3%;
+        left:48%;
+    }
+    .limarker_2nd{
+        top: 59.7%;
+        left:48%;
+    }
+    .limarker_3rd{
+        top: 64%;
+        left:48%;
+    }
+    .limarker_4th{
+        top: 68.5%;
+        left:48%;
+    }
+    @media screen and (min-width:1024px) {
+        .hope_contents{
+            gap:60px;
+        }
+        .limarker_1st{
+            top:48.8%;
+            left:37.5%;
+        }
+        .limarker_2nd{
+            top: 54.7%;
+            left:37.5%;
+        }
+        .limarker_3rd{
+            top: 60.7%;
+            left:37.5%;
+        }
+        .limarker_4th{
+            top: 67.2%;
+            left:37.5%;
+        }
+    }
+}
