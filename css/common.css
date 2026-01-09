@@ -637,12 +637,14 @@ small{
     position: fixed;
     z-index: -1;
     transform-style: preserve-3d;
-    animation: rotate 3s ease-in-out infinite; 
-    animation-delay: 10s;
+    animation: rotate 10s ease-in-out infinite; 
 }
 @keyframes rotate {
     0%{
         transform: rotate3d(1, 1, 0, 0deg);
+    }
+    20%{
+        transform: rotate3d(1, 1, 0, 360deg);
     }
     100%{
         transform: rotate3d(1, 1, 0, 360deg);
