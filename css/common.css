@@ -638,6 +638,7 @@ small{
     z-index: -1;
     transform-style: preserve-3d;
     animation: rotate 3s ease-in-out infinite; 
+    animation-delay: 10s;
 }
 @keyframes rotate {
     0%{
